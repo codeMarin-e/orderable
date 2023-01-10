@@ -1,0 +1,32 @@
+{
+    "name": "marinar/orderable",
+    "description": "Orderable",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marin Ivanov",
+            "email": "marin@dev.nddesign.no"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Marinar\\Orderable\\": "src/"
+        }
+    },
+
+    "require": {
+    },
+    "extra": {
+        "marinar": {
+            "module": false,
+            "plugin": true,
+            "addon_to": false
+        },
+        "laravel": {
+            "aliases": {
+                "MarinarOrderable": "Marinar\\Orderable\\MarinarOrderable"
+            }
+        }
+    }
+}
