@@ -4,7 +4,7 @@
     use Illuminate\Database\Seeder;
     use Marinar\Orderable\MarinarOrderable;
 
-    class MarinarOrderableInstallSeeder extends Seeder {
+    class MarinarOrderableRemoveSeeder extends Seeder {
 
         use \Marinar\Marinar\Traits\MarinarSeedersTrait;
 
@@ -13,9 +13,8 @@
             static::$packageName = 'marinar_orderable';
             static::$packageDir = MarinarOrderable::getPackageMainDir();
 
-            $this->autoInstall();
+            $this->autoRemove();
 
             $this->refComponents->info("Done!");
         }
-
     }
