@@ -5,6 +5,11 @@
 
     trait Orderable {
 
+        public static function bootAttOrderable() {
+            static::creating( static::class.'@onCreating_orderable' );
+            static::deleting( static::class.'@onDeleted_orderable' );
+        }
+
         public static function freeOrd($qryBld = null) {
             $raw = DB::raw("MAX(".static::getOrdField().') as freeOrd');
             $qryBld = $qryBld? clone $qryBld : static::getModel();
