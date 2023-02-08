@@ -1,5 +1,5 @@
 <?php
-    namespace Marinar\Orderable\Traits;
+    namespace App\Traits;
 
     use Illuminate\Support\Facades\DB;
 
