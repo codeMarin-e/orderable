@@ -3,7 +3,7 @@
 
     use Illuminate\Support\Facades\DB;
 
-    trait rderable {
+    trait Orderable {
 
         public static function bootOrderable() {
             static::creating( static::class.'@onCreating_orderable' );
