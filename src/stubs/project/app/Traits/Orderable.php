@@ -38,7 +38,7 @@
             $statement .= " END), {$table}.updated_at = ?";
             $statement .= " WHERE {$table}.{$primaryKey} IN ({$whereInStm})";
             $prepares = array_merge($prepares, [ new \Datetime() ], $objIds);
-            return DB::statement( DB::raw($statement), $prepares);
+            return DB::statement( DB::raw($statement)->getValue(DB::connection()->getQueryGrammar()), $prepares);
         }
 
         public function getPrevious($qryBld = null) {
