@@ -3,9 +3,9 @@
 
     use Illuminate\Support\Facades\DB;
 
-    trait Orderable {
+    trait rderable {
 
-        public static function bootAttOrderable() {
+        public static function bootOrderable() {
             static::creating( static::class.'@onCreating_orderable' );
             static::deleting( static::class.'@onDeleted_orderable' );
         }
