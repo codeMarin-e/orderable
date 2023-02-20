@@ -30,13 +30,14 @@ return [
      * If path is file - only it
      */
     'exclude_stubs' => [
+        // @HOOK_CONFIG_EXCLUDE_STUBS
     ],
 
     /**
      * Addons hooked to the package
      */
     'addons' => [
-        // @HOOK_ORDERABLE_CONFIGS_ADDONS
+        // @HOOK_CONFIGS_ADDONS
     ],
-    // @HOOK_ORDERABLE_CONFIGS
+    // @HOOK_CONFIGS
 ];
